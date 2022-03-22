@@ -1,15 +1,16 @@
 import React from "react";
 
+import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem";
 
-const ExpenseList = ({ expenses }) => {
+const Expenses = ({ expenses }) => {
   return (
-    <>
+    <div className="expenses">
       {expenses.map(({ id, title, amount, date }) => (
         <ExpenseItem key={id} title={title} amount={amount} date={date} />
       ))}
-    </>
+    </div>
   );
 };
 
-export default ExpenseList;
+export default Expenses;
