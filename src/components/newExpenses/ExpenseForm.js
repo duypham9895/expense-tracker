@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 
 import "./ExpenseForm.css";
 
-const ExpenseForm = ({ onAppendExpense }) => {
+const ExpenseForm = ({ onAppendExpense, onDisappearForm }) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState(
@@ -76,6 +76,9 @@ const ExpenseForm = ({ onAppendExpense }) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button onClick={onDisappearForm} type="button">
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
