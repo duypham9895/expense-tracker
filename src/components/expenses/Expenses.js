@@ -4,6 +4,7 @@ import "./Expenses.css";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
 
 const Expenses = ({ expenses: initialExpenses }) => {
   const year = new Date().getFullYear();
@@ -19,6 +20,7 @@ const Expenses = ({ expenses: initialExpenses }) => {
         defaultYear={filteredYear}
         onUpdateDefaultYear={setFilteredYear}
       />
+      <ExpensesChart expenses={filteredExpensesByYear} />
       <ExpensesList expenses={filteredExpensesByYear} />
     </Card>
   );

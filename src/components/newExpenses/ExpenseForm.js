@@ -33,7 +33,7 @@ const ExpenseForm = ({ onAppendExpense, onDisappearForm }) => {
     onAppendExpense({
       id: nanoid(),
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: Number(enteredAmount),
       date: new Date(enteredDate),
     });
 
